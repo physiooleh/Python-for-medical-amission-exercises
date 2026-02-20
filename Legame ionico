@@ -1,0 +1,75 @@
+/* Un atomo può perdere o guadagnare elettroni necessari per ottenere un guscio di valenza pieno, diventando un ione. 
+Un legame ionico risulta dalla forza di attrazione elettrostatica tra un catione e un anione.
+
+Un atomo può condividere elettrioni con uno o più atomi per acquisire un guscio di valenza pieno. 
+Il legame covalente risulta dalla forza di attrazione tra due atomi che condividono una o più coppie
+di elettroni. Si forma una molecola o un ione poliatomico.
+
+A1. Concetto tra una molecola e ione poliatomico 
+Una molecola e un gruppo di elettricamente neutro di atomi uniti da legami covalenti, mentre un ione poliatomico 
+è un insieme di atomi legati covalentemente che possiede una carica elettrica netta positiva o negativa.
+NH3 ammonio
+OH- Idrossido
+NO2- nitrito
+NO3- nitrato 
+CH3COO- acetato 
+CN- cianuro
+MnO4- premanganato 
+CrO42-cromato
+Cr2O72- bicromato 
+HCO3- idrogeno carbonato 
+SO32- solfito
+HSO3- idrogeno solfito(bisolfito)
+SO42-solfato
+HSO4- idrogeno solfato(bisolfato)
+PO43-fosfato 
+H2PO4- diidrogeno fosfato 
+ClO4- perclorato */
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+struct Formula {
+    string formula;  //1 string
+    string nomeChemica; //2 string
+};
+
+int main() {
+Formula quiz[] = {
+{"NH3", "ammonio"},
+{"OH-", "idrossido"},
+{"NO2", "nitrito"},
+{"NO3-", "nitrato"},
+{"CH3COO", "acetato"},
+{"CN-", "cianuro"},
+{"MnO4", "permanganato"},
+{"CrO4 2", "cromato"},
+{"Cr2O7 2", "bicromato"},
+{"HCO3", "idrogeno solfito"},
+{"PO4 3", "fosfato"},
+{"H2PO4", "diidrogeno fosfato"},
+{"ClO4", "perclorato"}
+};
+
+int numFormula = sizeof(quiz)/sizeof(quiz[0]);
+string answer; //3 string
+bool correct;
+
+cout << "Formula e nome chemica \n\n";
+
+for (int i = 0; i < numFormula; i++) {
+cout << i+1 << ". " << quiz[i].formula << ": ";
+cin >> answer;
+
+correct = (answer == quiz[i].nomeChemica);
+
+if (correct) {
+    cout << "Coretto. \n\n";
+} else {
+cout << "False. La risposta giusta era:" << quiz[i].nomeChemica <<"\n\n";
+}
+cout << "Hai completato il quiz \n";
+}
+}
+
