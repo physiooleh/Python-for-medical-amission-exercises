@@ -1,0 +1,133 @@
+#include <iostream>
+#include <string>
+#include <map>
+#include <queue>
+
+using namespace std;
+
+int main() {
+
+    map<string, string> patentePartePratica;
+    queue<string> preparazione;
+    string comando;
+
+    cout << "Mini terminale per prepararmi ad esame di guida, parte pratica\n";
+    cout << "Scrivi 'aiuto' per vedere i comandi\n";
+
+    while (true) {
+
+        cout << "\n> ";
+        getline(cin, comando);
+
+        if (comando == "aiuto") {
+            cout << "\nComandi disponibili:\n";
+            cout << "Revenue Q4 \n";
+            cout << "Sedile\n";
+            cout << "Pedagli\n";
+            cout << "Volante\n";
+            cout << "Specchi retrovisori\n";
+            cout << "Impianto frenante\n";
+            cout << "Alternatore\n";
+            cout << "Pressione olio del motore\n";
+            cout << "Liquido raffreddamento del motore\n";
+            cout << "Autostrada\n";
+            cout << "Sorpasso\n";
+            cout << "Esci\n";
+        }
+
+else if (comando == "Revenue") {
+cout << "2025 10,270 \n";
+cout << "2024 7,658 \n";
+cout << "2023 6,168 \n";
+cout << "2022 5,599 \n";
+cout << "2021 4,826 \n";
+cout << "2020 3,244 \n";
+
+        }
+
+        else if (comando == "Sedile") {
+            cout << "Le ginocchia devono essere leggermente piegate quando la frizione e premuta a fondo.\n";
+            cout << "La distanza si regola con la leva sotto il sedile.\n";
+            cout << "Lo schienale si regola con la rotella laterale.\n";
+        }
+
+        else if (comando == "Pedagli") {
+            cout << "Sinistra - frizione\n";
+            cout << "Centrale - freno\n";
+            cout << "Destra - acceleratore\n";
+            cout << "La gamba non deve essere ne troppo tesa ne troppo piegata.\n";
+        }
+
+        else if (comando == "Volante") {
+            cout << "Il volante si regola tramite una leva sotto il piantone.\n";
+            cout << "Controllare che non presenti giochi anomali.\n";
+        }
+
+        else if (comando == "Specchi retrovisori") {
+            cout << "Lo specchio centrale deve mostrare tutto il lunotto posteriore.\n";
+            cout << "Gli specchi laterali si regolano elettricamente.\n";
+        }
+
+        else if (comando == "Impianto frenante") {
+            cout << "La spia rossa puo indicare freno di stazionamento inserito o avaria.\n";
+            cout << "Controllare il livello del liquido freni nel vano motore.\n";
+        }
+
+        else if (comando == "Alternatore") {
+            cout << "Spia rossa indica che l'alternatore non carica la batteria.\n";
+            cout << "Andare dal meccanico appena possibile.\n";
+        }
+
+        else if (comando == "Pressione olio del motore") {
+            cout << "Aprire il cofano e controllare il livello con l'asticella.\n";
+            cout << "Pulire, reinserire e controllare il livello.\n";
+        }
+
+        else if (comando == "Liquido raffreddamento del motore") {
+            cout << "Fermare e spegnere il veicolo subito.\n";
+            cout << "Controllare il livello nel vaso di espansione.\n";
+        }
+
+        else if (comando == "Autostrada") {
+            cout << "Entrare e uscire tramite corsia di accelerazione o decelerazione.\n";
+            cout << "Usare di norma la prima corsia.\n";
+            cout << "Vietato: sosta, fermata, inversione, retromarcia.\n";
+        }
+
+        else if (comando == "Sorpasso") {
+
+            cout << "Prima di sorpassare accertarsi:\n";
+            cout << "- che la visibilita sia sufficiente\n";
+            cout << "- che la manovra sia sicura\n";
+            cout << "- che nessuno abbia gia iniziato il sorpasso\n";
+            cout << "- che la strada sia libera\n\n";
+
+            cout << "Come si sorpassa:\n";
+            cout << "- attivare l'indicatore di direzione\n";
+            cout << "- portarsi a sinistra\n";
+            cout << "- superare mantenendo adeguata distanza laterale\n";
+            cout << "- rientrare a destra appena possibile\n\n";
+
+            cout << "Il conducente sorpassato deve:\n";
+            cout << "- agevolare la manovra\n";
+            cout << "- non accelerare\n\n";
+
+            cout << "Sorpasso vietato:\n";
+            cout << "- in curva o su dosso\n";
+            cout << "- con scarsa visibilita\n";
+            cout << "- ai passaggi a livello\n";
+            cout << "- vicino agli attraversamenti pedonali\n";
+        }
+
+        else if (comando == "Esci") {
+            cout << "Uscita dal programma...\n";
+            break;
+        }
+
+        else {
+            cout << "Comando non riconosciuto. Scrivi 'aiuto'.\n";
+        }
+    }
+
+    return 0;
+}
